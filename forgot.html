@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kloudone.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+CDgftzFkZxlUqrnclFr6k5jc5r5l5uSc6nNn5IX9tF5F5F5F5" crossorigin="anonymous">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <h1>Forgot Password</h1>
+    <form id="forgotForm">
+        <div>
+            <label for="forgotEmail">Email:</label>
+            <input type="email" id="forgotEmail" name="forgotEmail" required>
+            <i class="fas fa-user"></i> 
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
+        </div>
+    </form>
+
+    <div id="message"></div>
+
+    <style>
+        /* Reset some default styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to top, #91e1e7 50%, #43f7d0 90%) no-repeat;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Text color (adjust as needed) */
+        }
+
+        /* Form styles */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #1269c7; /* Blue background color */
+            color: #fff; /* White text color */
+            border: none;
+            border-radius: 3px;
+        }
+
+        /* Submit button styles */
+        .btn-primary {
+            background: linear-gradient(45deg, #1278e4, #03515e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            display: block;
+            margin-top: 20px;
+        }
+
+        /* Message div styles */
+        #message {
+            text-align: center;
+            color: #333;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const forgotForm = document.getElementById("forgotForm");
+            const messageDiv = document.getElementById("message");
+
+            // Forgot Password Form Submission
+            forgotForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const forgotEmail = document.getElementById("forgotEmail").value;
+
+                // Implement your password recovery logic here (e.g., send a reset email)
+
+                // Display a message to the user indicating that a reset email has been sent
+                messageDiv.innerText = "A password reset email has been sent to " + forgotEmail;
+
+                forgotForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

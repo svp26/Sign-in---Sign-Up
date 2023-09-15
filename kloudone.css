@@ -1,0 +1,232 @@
+/* Reset some default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+}
+body {
+    background: linear-gradient(to top, #ffffff 50%, #ffff 90%) no-repeat;
+    padding: 20px; /* Add some padding to the body for better spacing on mobile */
+    align-items: center;
+    margin: none;
+    padding: 0%;
+
+}
+/* Center-align the forms-container */
+.h1 {
+    margin: 50px auto;
+
+}
+.forms-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Add this CSS to your existing styles */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+/* Add custom styles for validation message */
+#message {
+    text-align: center;
+    font-weight: bold;
+    color: green;
+    margin-top: 15px;
+}
+
+/* Style the "Login now" link */
+#message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#message a:hover {
+    text-decoration: underline;
+}
+
+
+.panel-heading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Increase font size for better readability on mobile */
+}
+
+#forgot {
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form-inline label {
+    padding-left: 10px;
+    margin: 10
+    px 0; /* Add vertical margin for better spacing on mobile */
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    margin-top: 50px;
+    border-radius: 30px;
+    font-size: 3rem; /* Increase font size for better mobile usability */
+}
+
+.panel {
+    max-height: auto; /* Remove the minimum height for better mobile layout */
+    box-shadow: 20px 20px 40px rgb(218, 218, 218); /* Reduce box-shadow for a lighter effect on mobile */
+    border-radius: 12px;
+    padding: 20px;
+     /* Add padding for better spacing on mobile */
+}
+
+.input-field {
+    border-radius: 100px;
+    padding: 60px; /* Increase padding for better touch targets on mobile */
+    cursor: pointer;
+    border: 1px solid #072762;
+    color: #03265e;
+    background-color: #1269c7;
+}
+
+input[type='Email']{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    background-color: #1269c7;
+    padding: 5px; /* Increase padding for better touch targets on mobile */
+    margin: 5px 0;
+}
+input[type='password'] {
+    border: none;
+    outline: none;
+    background-color: #1269c7;
+    box-shadow: none;
+    width: 100%;
+    padding: 5px; /* Increase padding for better touch targets on mobile */
+    margin: 5px 0; /* Add vertical margin for better spacing on mobile */
+}
+.btn-gradient {
+    background: linear-gradient(45deg, #08386c, #03717f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.fas-fa-user{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.fa-eye-slash.btn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding-left: flex;
+}
+.bordert {
+    border-top: 1px solid #aaa;
+    text-align: center; /* Center-align "or connect with" on mobile */
+    margin-top: 10px; /* Add margin to separate it from the form */
+}
+a[target='_blank'] {
+    text-align: center; /* Center-align social media links on mobile */
+    display: block;
+    transition: all 0.1s ease-in-out;
+    margin-top: 10px; /* Add margin to separate social media links from the form */
+}
+.bordert:after {
+    content: "or connect with";
+    background-color: #fff;
+    padding: 0px 8px;
+}
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+    body {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .forms-container {
+        max-width: 100%; /* Allow full width on small screens */
+    }
+    .btn.btn-primary {
+        font-size: 2rem; /* Reduce font size for better mobile usability */
+    }
+    .input-field {
+        padding: 20px; /* Adjust padding for touch targets on mobile */
+    }
+    /* Add more responsive styles as needed */
+}
+
+/* For medium to large screens */
+@media (min-width: 768px) {
+    body {
+        padding: 20px; /* Reset padding for larger screens */
+    }
+    .forms-container {
+        max-width: 400px; /* Reset max width for larger screens */
+    }
+    .btn.btn-primary {
+        font-size: 3rem; /* Reset font size for larger screens */
+    }
+    .input-field {
+        padding: 60px; /* Reset padding for larger screens */
+    }
+    /* Add more responsive styles as needed */
+}

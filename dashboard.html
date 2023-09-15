@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WElcome</title>
+    <link rel="stylesheet" href="kloudone.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+CDgftzFkZxlUqrnclFr6k5jc5r5l5uSc6nNn5IX9tF5F5F5F5" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Welcome</h1>
+    <div id="welcomeMessage">
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const welcomeMessage = document.getElementById("welcomeMessage");
+
+            // Check if the user is authenticated (you can implement your own logic)
+            const isAuthenticated = true; // Replace with your authentication logic
+
+            if (isAuthenticated) {
+                const storedUser = JSON.parse(localStorage.getItem("user"));
+                if (storedUser) {
+                    // Display a welcome message with the user's email
+                    welcomeMessage.innerHTML = "Welcome, " + storedUser.email + "!";
+                }
+            } else {
+                // Redirect to the login page if the user is not authenticated
+                window.location.replace("login.html");
+            }
+        });
+    </script>
+</body>
+</html>
