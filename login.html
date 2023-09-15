@@ -11,9 +11,11 @@
 <body>
     <div class="container">
         <div class="text-center mb-3">
-            <i class="fas fa-envelope fa-2x"></i>
+            <div class="hexagon">
+                <i class="bi bi-chat-dots-fill chat-icon"></i>
+            </div>
         </div> 
-        <h1 class="text-center">Sign In</h1>
+        <h1 class="text-center">SIGN IN</h1>
         <form id="loginForm">
             <div class="mb-3">
                 <i class="fas fa-user"></i>
@@ -30,7 +32,7 @@
                 <label class="form-check-label" for="remember">Remember me</label>
                 <a href="forgot.html" id="forgot" class="font-weight-bold ml-2">Forgot password?</a>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" class="btn btn-primary btn-block btn-sm">Login</button>
             <p class="mt-3 text-center">Don't have an account? <a href="signup.html">Register now</a></p>
         </form>
         <div class="text-center mt-3">
@@ -64,11 +66,11 @@
     
     
     <style>
-        input[type="email"] {
+        input[type="email"], input[type="password"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
-            background-color: #1269c7; /* Blue background color */
+            background-color: #0112aa; /* Blue background color */
             color: #fff; /* White text color */
             border: none;
             border-radius: 3px;
@@ -91,10 +93,38 @@
             text-decoration: none; /* Remove underlines from anchor tags */
             color: #333; /* Text color (adjust as needed) */
         }
+        .hexagon {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            background-color: purple;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            margin: 0 auto;
+        }
+
+        .chat-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+        }
 
         /* Social media icon hover effect */
         .social-media-icon:hover {
             color: #1003c8; 
+        }
+        #forgot {
+        min-width: 100px;
+        margin-left: auto;
+         text-decoration: none; 
+        }    
+
+        /* Reduce the button size */
+        .btn-sm {
+            padding: 5px 10px; /* You can adjust the padding as needed */
+            font-size: 14px; /* You can adjust the font size as needed */
         }
     </style>
     
@@ -128,4 +158,4 @@
         });
     </script>
 </body>
-</html>
+</
